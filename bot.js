@@ -34,6 +34,7 @@ client.on('ready', () => {
 });
 
 /////////////////////////////////////
+ var prefix= "^";
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -114,7 +115,6 @@ client.on('message', async msg =>{
 ///////////////////////
 client.on("message", async message => {
         if(!message.channel.guild) return;
- var prefix= "^";
         if(message.content.startsWith(prefix + 'server')) {
         let guild = message.guild
         let channel = message.channel
