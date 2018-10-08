@@ -34,7 +34,6 @@ client.on('ready', () => {
 });
 
 /////////////////////////////////////
- var prefix= "^";
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -97,6 +96,7 @@ client.on('message', async msg =>{
     if (!msg.content.startsWith(prefix)) return undefined;
     
     let args = msg.content.split(' ');
+    var prefix= "^";
 
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
