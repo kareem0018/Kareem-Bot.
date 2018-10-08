@@ -1,6 +1,6 @@
 const Discord = require('discord.js'); // inv
 const client = new Discord.Client();
- const prefix = "k!";
+ const prefix = "$";
 client.on('ready', () => { // Leaked by [ @Fr3on Gamer#9338 ]
     console.log('I am ready!');
 });
@@ -21,7 +21,7 @@ var fs = require('fs');
 
 client.on('ready', function(){ // Leaked by [ @Fr3on Gamer#9338 ]
     var ms = 30000 ;
-    var setGame = [`type K!help`, 'Kareem is love', 'wasseem is love <3'];
+    var setGame = [`type k!help`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -563,7 +563,7 @@ client.on('message', function(message) { // Leaked by [ @Fr3on Gamer#9338 ]
           if(!message.channel.guild) return;
           var mmmmEmbed = new Discord.RichEmbed()
           .setAuthor(client.user.username)
-          .setTitle('-  اضغط هنا !.')
+          .setTitle('-  click here for inv !.')
           .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=497804046791344138&permissions=8&scope=bot`)
           .setThumbnail(client.user.avatarURL)
           .setFooter(`- Requested By: ${message.author.tag}`,message.author.avatarURL);
