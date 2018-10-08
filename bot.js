@@ -23,24 +23,12 @@ const client = new Discord.Client({disableEveryone: true});
 const prefix = "^";
 /////////////////////////
 ////////////////////////
-
-client.on('ready', function(){ // Leaked by [ @Fr3on Gamer#9338 ]
-    var ms = 30000 ;
-    var setGame = [`type ^play`];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/kareem`);
-    }, ms);30000
-
+// playing
+client.on('ready', () => {
+client.user.setGame(,'https://www.twitch.tv/tarikrs');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(-help | On 20 Servers,'https://www.twitch.tv/v5bz%27);
 });
+
+
 /////////////////////////////////////
 //////////////////////////////////
 client.on('message', async msg =>{
