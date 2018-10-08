@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js'); // inv
 const client = new Discord.Client();
  const prefix = "$";
 client.on('ready', () => { // Leaked by [ @Fr3on Gamer#9338 ]
@@ -564,7 +564,7 @@ client.on('message', function(message) { // Leaked by [ @Fr3on Gamer#9338 ]
           var mmmmEmbed = new Discord.RichEmbed()
           .setAuthor(client.user.username)
           .setTitle('-  اضغط هنا !.')
-          .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot`)
+          .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=497804046791344138&permissions=8&scope=bot`)
           .setThumbnail(client.user.avatarURL)
           .setFooter(`- Requested By: ${message.author.tag}`,message.author.avatarURL);
           message.channel.send(mmmmEmbed)
