@@ -99,7 +99,18 @@ client.on('message', async msg =>{
 /////////////////////////
 ////////////////////////
 //////////////////////
-
+ client.on('message',function(message) { // Leaked by [ @Fr3on Gamer#9338 ]
+      if(message.content === prefix + "inv") {
+          if(!message.channel.guild) return;
+          var mmmmEmbed = new Discord.RichEmbed()
+          .setAuthor(client.user.username)
+          .setTitle('-  click here for inv !.')
+          .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=497804046791344138&permissions=8&scope=bot`)
+          .setThumbnail(client.user.avatarURL)
+          .setFooter(`- Requested By: ${message.author.tag}`,message.author.avatarURL);
+          message.channel.send(mmmmEmbed)
+      }
+   });
 /////////////////////////
 ////////////////////////
 //////////////////////
