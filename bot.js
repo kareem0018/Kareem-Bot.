@@ -25,7 +25,7 @@ const prefix = "^";
 ////////////////////////
 client.on('ready', function(){ // Leaked by [ @Fr3on Gamer#9338 ]
     var ms = 30000 ;
-    var setGame = ['type ^play', 'kareem bot'];
+    var setGame = ['type ^play|^inv', 'kareem bot'];
     var i = -1;
     var j = 0;
     setInterval(function (){
