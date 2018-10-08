@@ -21,7 +21,7 @@ var fs = require('fs');
 
 client.on('ready', function(){ // Leaked by [ @Fr3on Gamer#9338 ]
     var ms = 30000 ;
-    var setGame = [`King Community `,` King Bot By Fr3on Gamer#9338 !`];
+    var setGame = [`KaReeeM IS love `];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -32,7 +32,7 @@ client.on('ready', function(){ // Leaked by [ @Fr3on Gamer#9338 ]
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/kokoseda`);
+        client.user.setGame(setGame[i],`http://www.twitch.tv/kareem`);
     }, ms);30000
 
 });
