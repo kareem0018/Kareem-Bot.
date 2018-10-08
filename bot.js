@@ -34,7 +34,6 @@ client.on('ready', () => {
 });
 
 /////////////////////////////////////
-var prefix = "^"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -75,7 +74,6 @@ client.on('message', message => {
 });
 //////////////////////////////////
 client.on('message' , message => {
-    var prefix = "^";
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
