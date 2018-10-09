@@ -52,7 +52,7 @@ ${prefix}help-en
    });
   
    client.on("message", message => {
- if (message.content === "##help-ar") {
+ if (message.content === "^help-ar") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM") 
       .setDescription(`
