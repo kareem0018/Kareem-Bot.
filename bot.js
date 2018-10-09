@@ -236,7 +236,7 @@ client.on('message', async msg =>{
 /////////////////////////
 ////////////////////////
 //////////////////////
- client.on('message',function(message) { // Leaked by [ @Fr3on Gamer#9338 ]
+ client.on('message',function(message) { 
       if(message.content === prefix + "inv") {
           if(!message.channel.guild) return;
           var mmmmEmbed = new Discord.RichEmbed()
