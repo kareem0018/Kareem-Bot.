@@ -50,24 +50,8 @@ client.on('message', message => {
             var x = 0;
             var messages = msgs.map(m => `${++x} - ${m.author.tag}  :  ${m.content.split(" ").join(" ")}`).join(`
 `);
-            fs.writeFile(`${message.guild.id}.txt`, messages, (err) => {
-                if (err) console.log(err.message);
-                h.post(messages).then(url => {
-                    var c = message.guild.channels.find("name", 'logs');
-                    if (!c) return;
-                    var embed = new Discord.RichEmbed()
-                    .setTitle(`Bulk Delete. | ${msgs.size} Messages`)
-                    .setAuthor(client.user.tag, client.user.avatarURL)
-                    .setThumbnail(message.guild.iconURL)
-                    .setColor("RANDOM")
-                    .setDescription(`By \`${message.author.tag}\`\n\n In #${message.channel.name}\n\n [Vew Messages on : \`HasteBin\`](${url})`)
-                    .attachFile(`./${message.guild.id}.txt`);
-                    c.send(`Download Messages : `, {embed : embed});
-                });
-            });
         });
-        break;
-    };
+};
 });
 ///////////////////////////////////
 
