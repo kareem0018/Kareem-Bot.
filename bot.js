@@ -505,36 +505,45 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`**${song.title}**, is now playing!`);
 }
 
+client.on("message", message => {
+ if (message.content === "^help") {
+     message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+      ===================== اوامر عامة ===================== 
+^avatar ➾ يظهر صورة بروفابلك
+^play➾لتشغيل اغنية معينة
+^skip➾لتخطي الاغنية الحالية
+^queue➾لرؤية الاغاني المضافة
+^date➾لمعرفة التاريخ الحالي
+^inv➾لدعوة البوت لسيرفرك الشخصي
+=========================================================
+وقريباً المزيد من الاوامر
+=========================================================
 
-client.on('message', message => {
-    if (message.content === 'help') {
-        let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (!)**')
-        .addField('play', 'لتشغيل اغنية')
-        .addField('join', 'دخول رومك الصوتي')
-        .addField('disconnect', 'الخروج من رومك الصوتي')
-        .addField('skip', 'تخطي الأغنية')
-        .addField('pause', 'ايقاف الاغنية مؤقتا')
-        .addField('resume', 'تكملة الاغنية')
-        .addField('queue', 'اظهار قائمة التشغيل')
-        .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
-        .setFooter('(general_commands) لاظهار الاوامر العامة')
-      message.channel.send(helpEmbed);
-    }
-});
+      ===================== اوامر الميوزك ===================== 
+^play➾لتشغيل اغنية معينة
+^skip➾لتخطي الاغنية الحالية
+^queue➾لرؤية الاغاني المضافة
+^stop➾لايقاف البوت
+^resume➾لاستمرار البوت
 
-client.on('message', message => {
-    if (message.content === 'general_commands') {
-        let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر عامة...**')
-        .addField('avatar', "افاتار الشخص المطلوب")
-        .addField('gif', 'البحث عن جيف انت تطلبه')
-        .addField('ping', 'معرفة ping البوت')
-        .setFooter('المزيد قريبا ان شاء الله!')
-      message.channel.send(helpEmbed);
-    }
-});
+      ===================== الاوامر الادارية ===================== 
+^ban @user➾ لاعطاء حظر من السيرفر لشخص معين 
+^uban [userID]➾لفك الحظر
+^clear➾ لمسح الشات
+=========================================================
+وقريباً المزيد من الاوامر
+=========================================================
+
+`)
+  
+    message.author.sendEmbed(embed)
+    
+   }
+   });
+
 
 client.login(process.env.BOT_TOKEN);
 
