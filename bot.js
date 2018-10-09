@@ -28,7 +28,7 @@ client.on('ready', () => {
 
 	
 
-	client.user.setGame('Type ^help', 'https://twitch.tv/Kareeeeeem');
+	client.user.setGame('Type ^help|created by kareem', 'https://twitch.tv/Kareeeeeem');
 
 	
 
