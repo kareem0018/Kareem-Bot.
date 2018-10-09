@@ -54,7 +54,7 @@ client.on('message', message => {
                 if (err) console.log(err.message);
                 h.post(messages).then(url => {
                     var c = message.guild.channels.find("name", 'logs');
-                    if (^c) return;
+                    if (!c) return;
                     var embed = new Discord.RichEmbed()
                     .setTitle(`Bulk Delete. | ${msgs.size} Messages`)
                     .setAuthor(client.user.tag, client.user.avatarURL)
