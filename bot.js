@@ -34,37 +34,10 @@ client.on('ready', () => {
 });
 
 ////////////////////////////////////
-client.on("message", message => {
-    var prefix = "^";
- if (message.content === "^help") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("RANDOM") 
-      .setDescription(`
-      
-             Please Select Your Language 
-${prefix}help-ar
-${prefix}help-en
-             
-      `)
-   message.channel.sendEmbed(embed)
-    
-   }
-   });
-  
-   client.on("message", message => {
- if (message.content === "^help-ar") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("RANDOM") 
-      .setDescription(`
-^help-gn-ar ⇏ اوامر عامة
-`)
-message.channel.sendEmbed(embed)
- 
-}
-});
+
  client.on("message", message => {
     var prefix = "^";
- if (message.content === "^help-gn-ar") {
+ if (message.content === "^help") {
      message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
