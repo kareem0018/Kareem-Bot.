@@ -22,6 +22,7 @@ const client = new Discord.Client({disableEveryone: true});
 
 const prefix = "^";
 /////////////////////////
+
 ////////////////////////
 client.on('ready', () => {
 
@@ -33,6 +34,7 @@ client.on('ready', () => {
 
 });
 
+////////////////////////////////////
 ////////////////////////////////////
 client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;
@@ -54,45 +56,16 @@ client.on('message', message => {
 };
 });
 ///////////////////////////////////
-
- client.on("message", message => {
-    var prefix = "^";
- if (message.content === "^help") {
-     message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setDescription(`
-      ===================== اوامر عامة ===================== 
-^avatar ➾ يظهر صورة بروفابلك
-^play➾لتشغيل اغنية معينة
-^skip➾لتخطي الاغنية الحالية
-^queue➾لرؤية الاغاني المضافة
-^date➾لمعرفة التاريخ الحالي
-^inv➾لدعوة البوت لسيرفرك الشخصي
-=========================================================
-وقريباً المزيد من الاوامر
-=========================================================
-
-      ===================== اوامر الميوزك ===================== 
-^play➾لتشغيل اغنية معينة
-^skip➾لتخطي الاغنية الحالية
-^queue➾لرؤية الاغاني المضافة
-^stop➾لايقاف البوت
-^resume➾لاستمرار البوت
-
-      ===================== الاوامر الادارية ===================== 
-^ban @user➾ لاعطاء حظر من السيرفر لشخص معين 
-^uban [userID]➾لفك الحظر
-^clear➾ لمسح الشات
-=========================================================
-وقريباً المزيد من الاوامر
-=========================================================
-
-`)
-  
-    message.author.sendEmbed(embed)
-    
-   }
+client.on('message',function(message) { 
+      if(message.content === prefix + "contact") {
+          if(!message.channel.guild) return;
+          var mmmmEmbed = new Discord.RichEmbed()
+          .setAuthor(client.user.username)
+	  .setTitle(`ĪĪҚÂRЄЄЄM,,#9990`)
+          .setThumbnail(client.user.avatarURL)
+          .setFooter(`- Requested By: ${message.author.tag}`,message.author.avatarURL);
+          message.channel.send(mmmmEmbed)
+      }
    });
 /////////////////////////////////////////
 const HeRo = new Discord.Client();
