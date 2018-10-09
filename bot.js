@@ -35,8 +35,8 @@ client.on('ready', () => {
 
 ////////////////////////////////////
 client.on("message", message => {
-    var prefix = "##";
- if (message.content === "##help") {
+    var prefix = "^";
+ if (message.content === "^help") {
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM") 
       .setDescription(`
@@ -56,7 +56,19 @@ ${prefix}help-en
   const embed = new Discord.RichEmbed()  
       .setColor("RANDOM") 
       .setDescription(`
-
+^help-gn-ar ⇏ اوامر عامة
+`)
+message.channel.sendEmbed(embed)
+ 
+}
+});
+ client.on("message", message => {
+    var prefix = "^";
+ if (message.content === "^help-gn-ar") {
+     message.channel.send('**تم ارسال رسالة في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
       ===================== اوامر عامة ===================== 
 ^avatar ➾ يظهر صورة بروفابلك
 ^inv ➾ رابط اذخال البوت
