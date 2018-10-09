@@ -42,7 +42,7 @@ client.on('message', message => {
         case "^clear":
         if (message.channel.type !== "text") return message.reply("** This Command is Only For Servers | :x: **");
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("** You Don't Have Access To Do This Command | :x: **");
-        if (!args[1]) args[1] = 100;
+        if (!args[1]) args[1] = 20;
         var count = parseInt(args[1]);
         if (isNaN(count)) return message.reply("** You Have To Type Number | :x: **");
         message.channel.bulkDelete(count).then(msgs => {
