@@ -34,6 +34,48 @@ client.on('ready', () => {
 });
 
 ////////////////////////////////////
+client.on("message", message => {
+    var prefix = "##";
+ if (message.content === "##help") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("RANDOM") 
+      .setDescription(`
+      
+             Please Select Your Language 
+${prefix}help-ar
+${prefix}help-en
+             
+      `)
+   message.channel.sendEmbed(embed)
+    
+   }
+   });
+  
+   client.on("message", message => {
+ if (message.content === "##help-ar") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("RANDOM") 
+      .setDescription(`
+
+      ===================== اوامر عامة ===================== 
+^avatar ➾ يظهر صورة بروفابلك
+^inv ➾ رابط اذخال البوت
+^play➾لتشغيل اغنية معينة
+^skip➾لتخطي الاغنية الحالية
+^queue➾لرؤية الاغاني المضافة
+^date➾لمعرفة التاريخ الحالي
+^inv➾لدعوة البوت لسيرفرك الشخصي
+=========================================================
+وقريباً المزيد من الاكواد
+=========================================================
+
+`)
+  
+    message.author.sendEmbed(embed)
+    
+   }
+   });
+/////////////////////////////////////////
 const HeRo = new Discord.Client();
 client.on('message', message => {
 var prefix = "^";
