@@ -61,7 +61,8 @@ client.on('message',function(message) {
           if(!message.channel.guild) return;
           var mmmmEmbed = new Discord.RichEmbed()
           .setAuthor(client.user.username)
-	  .setTitle(`ĪĪҚÂRЄЄЄM,,#9990`)
+	  .setTitle(`Bot Owner
+ĪĪҚÂRЄЄЄM,,#9990`)
           .setThumbnail(client.user.avatarURL)
           .setFooter(`- Requested By: ${message.author.tag}`,message.author.avatarURL);
           message.channel.send(mmmmEmbed)
