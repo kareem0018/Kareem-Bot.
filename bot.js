@@ -16,4 +16,4 @@ m.sendMessage(args)
 }
 });
 
-A7MD.login('MzczMTc3MTc0MDM3MTAyNjAz.DrTL6g.QsYozZB_BAHCH2Bnjp4kalA6spQ');
+client.login('MzczMTc3MTc0MDM3MTAyNjAz.DrTL6g.QsYozZB_BAHCH2Bnjp4kalA6spQ');
